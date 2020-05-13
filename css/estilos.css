@@ -1,12 +1,32 @@
-/* Aula inicial :D */
+/* reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-image: url("https://2.bp.blogspot.com/-hJoFJkAUwzU/VVyk8V4_1sI/AAAAAAAAi5U/zbw4PiHcdtc/s1600/black-black-style-texture-texture-background-backgrounds.jpg");
+  background-image: url("../img/fundo.jpg");
   background-size: auto 100vh;
   font-family: Arial;
 }
 
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .menu {
   background-color: white;
+  position: fixed;
+  top: 0; /* Só pode por causa do position */
+  width: 100vh;
+}
+
+.menu a {
+  background-color: black;
 }
 
 .menu ul {
@@ -35,4 +55,9 @@ a:hover {
 
 .site-subtitle {
   font-style: italic;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 180px;
 }
