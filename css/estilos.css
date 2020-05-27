@@ -46,11 +46,19 @@ header {
   position: fixed;
   width: 100vw;
   top: 0; /* Só pode por causa do position */
+  z-index: 1;
 }
 
 .menu a {
   display: block;
   padding: 20px 30px;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.menu a:active,
+.menu a:hover {
+  background-color: teal;
+  color: whitesmoke;
 }
 
 .menu ul {
@@ -67,9 +75,22 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  /*text-decoration: underline;*/
-  background: aquamarine;
+.titulo {
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+
+  animation: 1.5s linear 0.3s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+  from {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
 }
 
 .site-subtitle,
@@ -88,15 +109,55 @@ a:hover {
   font-family: "Source Code Pro", monospace;
 }
 
+.sobre,
+.contato,
 .portfolio {
   padding: 2em;
+  min-height: 100vh;
 }
 
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.sobre h2,
+.contato h2,
 .portfolio h2 {
   font-family: "Source Code Pro", monospace;
   color: whitesmoke;
   margin-bottom: 1em;
   font-size: 2em;
+}
+
+.sobre p {
+  color: white;
+  text-indent: 1.4em;
+  margin-top: 1em;
+  text-align: justify;
+}
+
+#paragrafo {
+  padding-top: 30px;
+}
+
+.sobre .profile {
+  margin-left: 2em;
+}
+
+@media (min-width: 800px) {
+  .sobre .profile {
+    float: right;
+  }
+}
+
+.sobre .profile img {
+  max-width: 22em;
+  height: auto;
+  border-radius: 20%;
 }
 
 .portfolio .grid {
@@ -125,12 +186,62 @@ a:hover {
 
 .img-portfolio {
   height: 180px;
-  width: 280px;
+  width: 100%;
   object-fit: cover;
   object-position: left bottom;
   border-radius: 10px;
+  transform: scale(1);
+  /* transition: transform 0.5s; */
+}
+
+/* .img-portfolio:hover {
+  transform: scale(1.5) rotate(5deg);
+} */
+.flip-card {
+  perspective: 500px;
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card-back {
+  background-color: white;
+  height: 180px;
+  width: 100%;
+  transform: rotateY(180deg);
 }
 
 .grid figcaption {
   color: whitesmoke;
+}
+
+.contato .icons {
+  text-align: center;
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 5em;
+  transition: text-shadow 0.4s;
+}
+
+.contato a:active,
+.contato a:hover {
+  background: none;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
 }

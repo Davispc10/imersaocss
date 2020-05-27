@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>David Azeredo</title>
     <link rel="stylesheet" href="css/estilos.css" />
+    <script
+      src="https://kit.fontawesome.com/315651368f.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Roboto:wght@400;700&family=Source+Code+Pro&display=swap"
       rel="stylesheet"
@@ -13,53 +17,131 @@
   <body>
     <header>
       <nav class="menu">
-        <ul>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Portfólio</a></li>
-          <li><a href="#">Contato</a></li>
+        <ul class="container">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
-      <div>
+      <div class="titulo">
         <h1 class="site-title">David Azeredo</h1>
         <h2 class="site-subtitle">FullStack Developer</h2>
       </div>
     </header>
-    <section class="portfolio">
-      <h2>Portfólio</h2>
+    <section class="sobre container">
+      <h2>Sobre</h2>
 
+      <figure class="profile">
+        <img src="./img/David.jpg" alt="David Azeredo" />
+      </figure>
+
+      <p id="paragrafo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat saepe
+        velit at, iure illum quis minus ratione, molestias aliquam non fugit
+        accusamus ipsam delectus maxime quos. Veritatis dicta optio cum?
+      </p>
+      <p>
+        Facilis doloremque dolores dignissimos repellendus neque deleniti
+        reiciendis, perspiciatis ab eveniet ducimus explicabo corporis a
+        deserunt modi fugit cumque totam nostrum voluptates amet odio quos
+        maiores error suscipit. Vitae, vel.
+      </p>
+      <p>
+        Ducimus enim necessitatibus consequuntur rerum velit excepturi dolore
+        aspernatur sed. Repellendus omnis cumque quas, aspernatur vitae ipsa
+        laudantium distinctio qui adipisci ex iste eaque aut eveniet alias
+        explicabo. Eos, porro!
+      </p>
+      <p>
+        Aliquid, officia consequatur aperiam eos, quasi amet quod odio id
+        voluptatum nobis excepturi quaerat ab? Aliquid atque placeat quas
+        veritatis maxime reiciendis ex itaque, eius nemo dignissimos ducimus
+        dolorum explicabo!
+      </p>
+    </section>
+    <section class="portfolio container">
+      <h2>Portfólio</h2>
       <div class="grid">
-        <figure>
-          <img
-            class="img-portfolio"
-            src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg"
-            alt="eCommerce"
-          />
-          <figcaption>eCommerce</figcaption>
-        </figure>
-        <figure>
-          <img
-            class="img-portfolio"
-            src="./img/mobile-creditos-nate-grant-unsplash.jpg"
-            alt=">Mobile"
-          />
-          <figcaption>Mobile</figcaption>
-        </figure>
-        <figure>
-          <img
-            class="img-portfolio"
-            src="./img/webdesign-creditos-domenico-loia-unsplash.jpg"
-            alt="Web design"
-          />
-          <figcaption>Web design</figcaption>
-        </figure>
-        <figure>
-          <img
-            class="img-portfolio"
-            src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg"
-            alt="Projetos pessoais"
-          />
-          <figcaption>Projetos pessoais</figcaption>
-        </figure>
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img
+                class="img-portfolio"
+                src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg"
+                alt="eCommerce"
+              />
+              <figcaption>eCommerce</figcaption>
+            </figure>
+            <div class="card-back">
+              Parte de trás
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img
+                class="img-portfolio"
+                src="./img/mobile-creditos-nate-grant-unsplash.jpg"
+                alt="Mobile"
+              />
+              <figcaption>Mobile</figcaption>
+            </figure>
+            <div class="card-back">
+              Parte de trás
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img
+                class="img-portfolio"
+                src="./img/webdesign-creditos-domenico-loia-unsplash.jpg"
+                alt="Web design"
+              />
+              <figcaption>Web design</figcaption>
+            </figure>
+            <div class="card-back">
+              Parte de trás
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img
+                class="img-portfolio"
+                src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg"
+                alt="Projetos pessoais"
+              />
+              <figcaption>Projetos pessoais</figcaption>
+            </figure>
+            <div class="card-back">
+              Parte de trás
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contato container" id="contato">
+      <h2>Contato</h2>
+      <div class="grid icons">
+        <a target="_blank" href="https://github.com/Davispc10">
+          <i class="fab fa-github"></i>
+        </a>
+        <a target="_blank" href="https://www.instagram.com/davidazzeredo">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a target="_blank" href="https://linkedin.com/in/david-azeredo">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:david.s.azeredo@gmail.com">
+          <i class="far fa-envelope"></i>
+        </a>
       </div>
     </section>
   </body>
